@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vender Setup Form</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/343741ebda.js" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="  py-[30px] pb-[50px]">
+        <header class="flex px-[100px] justify-between items-center pb-[30px] border-b-[1px] border-gray-400">
+            <h1 class="font-semibold text-[24px]">Vender Setup Form</h1>
+            <div class="flex justify-end items-center gap-[15px]">
+                <button type="button" class="bg-blue-400 py-[8px] px-[15px] rounded-[10px] text-white"><a href="/index.html"><i class="fa-solid fa-gauge mr-[5px]"></i>Dashboard</a></button>
+                <button type="button" class="bg-blue-400 py-[8px] px-[15px] rounded-[10px] text-white"><a href="#list"><i class="fa-solid fa-list mr-[5px]"></i>Venders List</a></button>
+                <label for="Date">Date:</label>
+                <input type="date" placeholder="Enter Your Date" class="border-[1px] border-gray-400 py-[8px] px-[15px] rounded-[10px]">
+            </div>
+        </header>
+
+        <form class="py-[50px] px-[100px] ">
+            <fieldset class="border-[1px] border-gray-400 p-[15px] flex justify-start gap-[20px] flex-wrap my-[30px]">
+                <legend class="text-[20px] font-semibold text-center">Vender Details</legend>
+
+                <div class="w-[300px]">
+                    <label for="Firm Name">Firm Name</label><br>
+                    <input type="text" placeholder="Enter Firm Name" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Owner Name">Owner Name</label><br>
+                    <input type="text" placeholder="Enter Owner Name" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Primary Cell No:">Primary Cell No:</label><br>
+                    <input type="tel" placeholder="000 00000 000" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Secondary Cell No:">Secondary Cell No:</label><br>
+                    <input type="tel" placeholder="000 00000 000" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Email">Email</label><br>
+                    <input type="email" placeholder="Enter Email Address" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Regitser Tax">Register Tax</label><br>
+                    <select name="filer" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="NTN No:">NTN No:</label><br>
+                    <input type="number" placeholder="Enter NTN No: " class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Sales Tax No:">Sales Tax No:</label><br>
+                    <input type="number" placeholder="Enter Sales Tax No:" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Alt %">Alt %</label><br>
+                    <input type="number" placeholder="0.00" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Discount %">Discount %</label><br>
+                    <input type="number" placeholder="0.00" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                
+
+                <div class="w-[300px]">
+                    <label for="Debit Card">Debit Card</label><br>
+                    <input type="number" placeholder="Enter Debit Card Details" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+
+                <div class="w-[300px]">
+                    <label for="Credit Card">Credit Card</label><br>
+                    <input type="number" placeholder="Enter Credit Card Details" class="border-gray-400 border-[1px] px-[5px] w-[300px] h-[35px] mt-[5px] rounded-[5px]" >
+                </div>
+            </fieldset>
+
+            <button type="submit" class="bg-blue-500 px-[15px] py-[10px] rounded-[10px] float-right mb-[20px] font-semibold text-white"><i class="fa-solid fa-floppy-disk mr-[5px]"></i> Save</button>
+
+              
+        </form>
+
+        <div class="px-[100px]">
+            <h1 class="font-semibold text-[24px]">Customers List</h1> 
+            <table id="list" class="w-full">
+                <thead class="">
+                    <tr>
+                        <th>Firm Name</th>
+                        <th>Address</th>
+                        <th>Primary Cell</th>
+                        <th>Email</th>
+                        <th>Debit Card</th>
+                        <th>Credit Card</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+    
+                <tbody >
+                    <tr id="table1">
+                        <td>John Doe</td>
+                        <td>Town, City, Province</td>
+                        <td>012 34567 890</td>
+                        <td>example@gmail.com</td>
+                        <td>012 34567 890</td>
+                        <td>012 34567 890</td>
+                        <td class="flex justify-center items-center gap-[10px]">
+                            <button class="bg-blue-400 text-white px-[5px] "><i class="fa-solid fa-eye"></i></button>
+                            <button class="bg-blue-600 text-white px-[5px] "><i class="fa-solid fa-pen-to-square"></i></button>
+                            <button onclick="deletTable()" class="bg-red-600 text-white px-[5px] "><i class="fa-solid fa-trash"></i></button>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+           </table>
+
+           
+        </div>
+    </div>
+</body>
+</html>
